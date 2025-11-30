@@ -1,0 +1,271 @@
+/* Body Layout */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: hwb(0 8% 91%);
+    font-family: Arial, sans-serif, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    background: #121212;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 20px 0;
+    font-size: 18px;
+    cursor: pointer;
+    color: #b3b3b3;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+
+/* Main Section */
+
+.main {
+    flex: 1;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+
+/* Gradient Album Header */
+
+.album-header {
+    position: relative;
+    padding: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.bg-blur {
+    position: absolute;
+    inset: 0;
+    background: url("https://i.pinimg.com/736x/42/28/5c/42285cb0fceb185134ef6f25459ba927.jpg");
+    background-size: cover;
+    filter: blur(40px) brightness(0.5);
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.album-cover,
+.album-details {
+    position: relative;
+    z-index: 2;
+}
+
+.album-cover {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.album-details {
+    margin-left: 20px;
+}
+
+.album-details .small {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.album-details h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.desc {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.play-btn {
+    margin-top: 15px;
+    background: #1db954;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    background-color: #a7c484;
+}
+
+
+/* Songs Section */
+
+.section-title {
+    font-size: 24px;
+    margin-left: 25px;
+}
+
+.song-list {
+    padding: 20px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    background: #181818;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: helvetica;
+}
+
+.song:hover {
+    background: #675a5a;
+}
+
+.song span {
+    width: 25px;
+    color: #888;
+}
+
+.song img {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.song {
+    background: #111;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.song:hover {
+    background: #1f1f1f;
+}
+
+.song {
+    background: #111;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.song:hover {
+    background: #1f1f1f;
+}
+
+.options {
+    margin-left: auto;
+    color: #aaa;
+    cursor: pointer;
+}
+
+
+/* Bottom Music Player */
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    background: #111;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #333;
+    box-shadow: #3a3a3a;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+}
+
+.player-left img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.song-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.song-artist {
+    margin: 0;
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+/* Controls */
+
+.controls {
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+.controls i {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+/* Progress Bar */
+
+.progress-bar {
+    width: 180px;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.progress {
+    width: 68%;
+    height: 5px;
+    background: #1db954;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .sidebar {
+        display: none;
+    }
+    .player {
+        left: 0;
+    }
+    .album-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
